@@ -1,5 +1,6 @@
 let tasks = []; // Array to store tasks
 
+const endpoint = "https://taskmanager-jet-one.vercel.app";
 // Executes when the window is loaded
 window.onload = () => {
   fetchTasks(); // Fetches tasks from the server upon window load
@@ -56,7 +57,7 @@ function renderTasks() {
 
 // Fetches tasks from the server
 function fetchTasks() {
-  fetch('http://localhost:3000/tasks')
+  fetch(`${endpoint}/tasks`)
     .then(response => response.json()) // Parses response as JSON
     .then(data => {
       tasks = data; // Updates the tasks array with fetched data
@@ -83,7 +84,7 @@ function addTask() {
     };
 
     // Sends a POST request to add the new task
-    fetch('http://localhost:3000/tasks', {
+    fetch(`${endpoint}/tasks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -108,7 +109,7 @@ function markTaskCompleted(id, completed) {
   const task = tasks.find(task => task.id === id); // Finds the task by ID
   if (task) {
     // Sends a PUT request to update task completion status
-    fetch(`http://localhost:3000/tasks/${id}`, {
+    fetch(`${endpoint}/tasks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -128,7 +129,7 @@ function markTaskCompleted(id, completed) {
 // Deletes a task
 function deleteTask(id) {
   // Sends a DELETE request to remove the task
-  fetch(`http://localhost:3000/tasks/${id}`, {
+  fetch(`${endpoint}/tasks/${id}`, {
     method: 'DELETE',
   })
     .then(response => {
