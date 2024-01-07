@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for the document -->
+  <meta charset="UTF-8">
+  <!-- Title of the web page -->
+  <title>Task Manager</title>
+  <!-- Linking an external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main container for the task manager -->
+  <div class="container">
+    <!-- Heading for the task manager -->
+    <h1>Task Manager</h1>
+    <!-- Input section for adding tasks -->
+    <div class="input-card">
+      <div class="input-fields">
+        <!-- Input field for task name -->
+        <input type="text" id="taskNameInput" placeholder="Enter task name">
+        <!-- Input field for task description -->
+        <input type="text" id="taskDescInput" placeholder="Enter task description">
+        <!-- Button to add a new task -->
+        <button class="button" onclick="addTask()">Add Task</button>
+      </div>
+    </div>
+    <!-- Section to display the list of tasks -->
+    <div class="tasks-card">
+      <!-- Heading for the task list -->
+      <h2>My Tasks</h2>
+      <!-- Container to display tasks -->
+      <div class="tasks" id="taskList"></div>
+    </div>
+  </div>
+
+  <!-- Linking an external JavaScript file -->
+  <script src="scripts.js"></script>
+</body>
+</html>

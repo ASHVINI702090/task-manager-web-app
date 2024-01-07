@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4CAF50;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .input-card,
+  .tasks-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-fields {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-fields input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px; /* Adjust border-radius for a rounded rectangular shape */
+    border: 1px solid #ccc;
+    width: calc(100% - 22px);
+  }
+  
+  .input-fields button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px; /* Adjust border-radius for a rounded rectangular shape */
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  
+  .button {
+    width: 100%; /* Ensures the button stretches across the container */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adding a transition effect */
+  }
+  
+  .button:hover {
+    background-color: #90EE90; /* Darker green color on hover */
+  }
+  
+  .tasks {
+    margin-top: 20px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .task-item input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+    margin-top: 4px;
+  }
+  
+  .task-item h3 {
+    margin: 0;
+  }
+  
+  .task-item p {
+    margin: 5px 0 0;
+    color: #888;
+  }
+  
+  .delete-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #4CAF50;
+    margin-left: auto;
+  }
+  
+
+  
+  .task-item input[type="checkbox"] {
+  margin-right: 15px; /* Increase the margin between checkbox and content */
+  transform: scale(1.5);
+  margin-top: 4px;
+}
